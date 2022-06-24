@@ -89,4 +89,35 @@
 
 を\textbf{デバイ長}という。プラズマ中に置かれた電荷による電位はデバイ長で1/eまで減衰することになる。
 
+\section{プラズマ中の分散関係とカットオフ}
+\par 電子のみが動くことができるプラズマで、Maxwell方程式から
+
+\begin{eqnarray}
+    \label{nabla_cross_e1}
+    \nabla\times\bm{E} &=& -\frac{1}{c}\frac{\partial \bm{B}}{\partial t} \\
+    \label{nabla_cross_b1}
+    \nabla\times\bm{B} &=& \frac{4\pi}{c}\bm{j}+\frac{1}{c}\frac{\partial \bm{E}}{\partial t} 
+\end{eqnarray}
+
+(\ref{nabla_cross_b1})の両辺をtで微分して
+
+\begin{equation}
+    \nabla\times\left(\frac{\partial \bm{B}}{\partial t}\right) 
+    = \frac{4\pi}{c}\frac{\partial \bm{j}}{\partial t}+\frac{1}{c}\frac{\partial^2 \bm{E}}{\partial t^2} 
+\end{equation}
+
+左辺に(\ref{nabla_cross_e1})を代入して
+
+\begin{equation}
+    -c\nabla\times(\nabla\times\bm{E}) = \frac{4\pi}{c}\frac{\partial \bm{j}}{\partial t}+\frac{1}{c}\frac{\partial^2 \bm{E}}{\partial t^2} 
+\end{equation}
+
+イオンの運動は無視して電流は電子の運動のみからなるとすると、
+
+\begin{eqnarray}
+    \bm{j} = -en\bm{v}_e \\
+    \label{ve_def}
+    \bm{v}_e = -\frac{\bm{v}_e}{en}
+\end{eqnarray}
+
 \end{document}
