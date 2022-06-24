@@ -10,18 +10,50 @@
 \par 連続の式、運動方程式、Poisson方程式を書き出すと、
 
 \begin{eqnarray}
-    \label{continuous} 連続の式 &:& \frac{\partial n_e}{\partial t}+
+    \label{continuous} 連続の式 &:& \frac{\partial n_e}{\partial t} +
         \nabla\cdot (n\bm{v}) = 0 \\
-    \label{motion} 運動方程式 &:& mn\left( \frac{\partial \bm{v}}{\partial t}+(\bm{v}\cdot\nabla)\bm{v}\right) = -en\bm{E} \\
+    \label{motion} 運動方程式 &:& mn\left( \frac{\partial \bm{v}}{\partial t}+
+      (\bm{v}\cdot\nabla)\bm{v}\right) = -en\bm{E} \\
     \label{poisson} Poisson方程式 &:& \nabla\cdot\bm{E}=4\pi e(n_i-n_e)
 \end{eqnarray}
 
-\par 平衡系での物理量と微小な変化分を分ける。
+\par 平衡系での物理量と微小な変化分を分ける。さらに平衡系では電場、速度は0とみなす。すなわち
 
-式(\ref{continuous})より
 \begin{eqnarray}
-
-
+    n_e &=& n_0 + n_1 \nonumber \\ 
+    \bm{v}_e &=& \bm{v}_1 \nonumber \\
+    \bm{E} &=& \bm{E}_1 \nonumber 
 \end{eqnarray}
+
+添字の0がついたものは時間的、空間的に一様である。変化量は微小であり、2次以上の高次項は無視する。これらを基礎方程式系に代入して整理すると、
+
+\begin{eqnarray}
+    \frac{\partial n_1}{\partial t}+\nabla\cdot(n_0\bm{v_1}) = 0 \\
+    m\frac{\partial \bm{v}}{\partial t} = -e\bm{E}_1 \\
+    \nabla\cdot\bm{E}_1 = -4\pi en_1
+\end{eqnarray}
+
+\par ここで各物理量をFourier変換する。各物理量は$\mathrm{e}^{i(\omega t-kx)}$に比例するとする。すると$\frac{\partial}{\partial t}\rightarrow\omega$,$\nabla\rightarrow k$となるので、
+
+\begin{eqnarray}
+    i\omega \bar{n}-ikn_0 \bar{v} = 0 \\
+    -im\omega\bar{v} = -e\bar{E} \\
+    -ik\bar{E}=-4\pi e\bar{n}
+\end{eqnarray}
+
+これらを整理して$\bar{v},\bar{n},\bar{E}$を消去すると、下記を得る。
+
+\begin{equation}
+    \omega^2 = \frac{4\pi n_0 e^2}{m}
+\end{equation}
+
+この振動数を\textbf{プラズマ振動数}という。すなわち
+
+\begin{equation}
+    \omega_p \equiv \sqrt{\frac{4\pi n_0 e^2}{m}}
+\end{equation}
+
+となる。
+
 
 \end{document}
