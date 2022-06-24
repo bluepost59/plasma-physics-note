@@ -55,5 +55,38 @@
 
 となる。
 
+\section{デバイ遮蔽}
+\par 水素プラズマを考える。電子密度を$n_e$、イオン密度を$n_i$とすると、Poisson方程式は
+
+\begin{equation}
+    \label{poisson2}
+    \nabla^2 \phi = 4\pi e(n_i-n_e)
+\end{equation}
+
+イオンは固定されているとして$n_i=n_0$とする。電子についてマクスウェル分布を考えると
+
+\begin{equation}
+    n_e = n_0 \mathrm{e}^{\frac{e\phi}{k_B T}}
+\end{equation}
+
+となる。これらを用いると(\ref{poisson2})は
+
+\begin{eqnarray}
+    \nabla^2 \phi = 4\pi en_0\left(\mathrm{e}^{\frac{e\phi}{k_B T}} -1 \right)
+\end{eqnarray}
+
+また$\frac{e\phi}{k_B T} \ll 1$としてTaylor展開すると、
+
+\begin{eqnarray}
+    \nabla^2 \phi = \frac{4\pi e^2 n_0}{k_B T}\phi
+\end{eqnarray}
+
+となる。この時
+
+\begin{equation}
+    \lambda_D = \sqrt{\frac{4\pi e^2 n_0}{k_B T}}
+\end{equation}
+
+を\textbf{デバイ長}という。プラズマ中に置かれた電荷による電位はデバイ長で1/eまで減衰することになる。
 
 \end{document}
